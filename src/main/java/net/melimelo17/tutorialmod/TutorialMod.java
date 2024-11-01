@@ -1,6 +1,7 @@
 package net.melimelo17.tutorialmod;
 
 import com.mojang.logging.LogUtils;
+import net.melimelo17.tutorialmod.Items.ModCreativeModeTabs;
 import net.melimelo17.tutorialmod.Items.ModItems;
 import net.melimelo17.tutorialmod.blocks.ModBlocks;
 import net.minecraft.world.item.CreativeModeTabs;
@@ -34,6 +35,8 @@ public class TutorialMod {
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
+
+        ModCreativeModeTabs.register(modEventBus);
 
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
